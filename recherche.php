@@ -1,28 +1,14 @@
-<!DOCTYPE html>
-<html lang="fr">
- <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel = "stylesheet" href="style.css"/>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-        <nav class="navbar navbar-expand-sm">
-            <form action = "listerlivre.php" method = "get" >
-            <input type="texte" placeholder="Rechercher dans le catalogue (saisir le nom de l'auteur )"name="nom"size="68">
-           <input type="submit" name="rechercher" value="rechercher">
-            </form>
-        </nav>
-        <?php
-          if (isset($_REQUEST["rechercher"])){
-          require_once('connexion.php');
-          $nom = $_GET['nom'];
-          $select = $connexion->prepare("SELECT titre,nolivre,anneeparution FROM auteur, livre WHERE auteur.noauteur = livre.noauteur and auteur.nom=:nom");
-          $select->bindValue(":nom",$nom);
-          $select->setFetchMode(PDO::FETCH_OBJ);
-          $select->execute();
-          
-            }
-        ?>
-</booy>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-danger form-control me-2">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="http://127.0.0.1/PHP/BibliodrivePHP/index.php">accueil<img src="" alt="bibliothèque " width="55" height="55"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+            <input class="form-control me-2" type="text" placeholder="chercher un auteur" name="rchAuteur" >
+            <button class="btn btn-light"  type="submit">rechercher </button>
+          </form>
+        </div>
+      </div>
+    </nav>
