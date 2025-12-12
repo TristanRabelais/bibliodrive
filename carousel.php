@@ -27,7 +27,7 @@
 		<div class="container mt-4">
 			<h3 class="text-center">Dernières acquisitions :</h3>
 		</div>
-		<div id="demo" class="carousel slide carousel-fade carousel-dark" data-bs-ride="carousel">
+		<div id="demo" class="carousel slide" data-bs-ride="carousel">
 			<div class="carousel-indicators">
 				<?php for ($i = 0; $i < count($livres); $i++): ?>
 					<button type="button"
