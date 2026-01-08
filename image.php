@@ -1,0 +1,1 @@
+<img src="./img_site/bibliotheque.jpg" alt="Bibliothèque" class="img-fluid rounded shadow-sm" style="max-height: 200px;">

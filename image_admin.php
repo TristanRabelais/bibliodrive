@@ -1,0 +1,1 @@
+<img src="./img_site/admin.jpg" alt="Gestion Admin" class="img-fluid rounded shadow-sm" style="max-height: 200px;">
