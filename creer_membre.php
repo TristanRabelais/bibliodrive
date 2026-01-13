@@ -10,7 +10,7 @@ if (isset($_POST['bouton'])) {
     $ville = $_POST['ville'];
     $codepostal = $_POST['codepostal'];
     $profil = $_POST['profil'];
-
+// rgerg
     if (!empty($mel) && !empty($motdepasse) && !empty($nom) && !empty($prenom) && !empty($adresse) && !empty($ville) && !empty($codepostal) && !empty($profil)) {
         try {
             $stmt = $connexion->prepare("INSERT INTO utilisateur (mel, motdepasse, nom, prenom, adresse, ville, codepostal, profil) VALUES (:mel, :motdepasse, :nom, :prenom, :adresse, :ville, :codepostal, :profil)");
